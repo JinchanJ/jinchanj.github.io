@@ -13,7 +13,7 @@
       {{ yg.name }}
     </div>
 
-    {%- assign months = yg.items | group_by_exp: "p", "p.date | date: '%Y-%m'" -%}
+    {%- assign months = yg.items | group_by_exp: "p", "p.date | date: '%B'" -%}
 
     {%- for mg in months -%}
       {% assign month_label = mg.name | date: "%B" %}
